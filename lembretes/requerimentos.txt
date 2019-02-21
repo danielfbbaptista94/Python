@@ -1,0 +1,7 @@
+$env:FLASK_APP="lembrete.py"
+$env:FLASK_DEBUG=1
+flask run
+
+#SECRET_KEY
+    import secrets
+    secrets.token_hex(8)

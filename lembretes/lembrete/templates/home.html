@@ -1,0 +1,17 @@
+
+{% extends "layout.html" %}
+{% block content %}
+  {% for lembrete in lembretes%}
+      <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <b id="titulo" class="mr-2">{{ lembrete.titulo }}</b>
+              <small class="text-muted">{{ lembrete.data }}</small>
+              <a href="{{ url_for('editar', lembrete_id = lembrete.id)}}" class="btn btn-primary btn-sm mt-1 mb-1 float-right">Edit</a>
+            </div>
+            <p class="article-content">{{ lembrete.texto }}</p>
+          </div>
+      </article>
+  {%endfor%}
+
+{% endblock content %}

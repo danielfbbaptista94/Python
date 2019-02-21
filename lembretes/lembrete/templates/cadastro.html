@@ -1,0 +1,30 @@
+
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">{{ legend }}</legend>
+                <!--TITULO-->
+                <div class="form-group">
+                    {{ form.titulo.label(class="form-control-label") }}
+                    {{ form.titulo(class="form-control form-control-lg") }}
+                </div>
+                <!--DATA-->
+                <div class="form-group">
+                    {{ form.data.label(class="form-control-label") }}
+                    {{ form.data(class="form-control form-control-lg") }}
+                </div>
+                <!--TEXTO-->
+                <div class="form-group">
+                    {{ form.texto.label(class="form-control-label") }}
+                    {{ form.texto(class="form-control form-control-lg") }}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.salvar(class="btn btn-outline-info")}}
+            </div>
+        </form>
+    </div>
+{% endblock content %}
