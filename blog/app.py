@@ -1,15 +1,14 @@
-from flask import flask
+from flask import flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
-def index:
+def index():
     render_template('index.html')
 
 @app.route('/about')
-def about:
+def about():
     render_template('about.html')
-
 
 
 if __name == '__main__':
